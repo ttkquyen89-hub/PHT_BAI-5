@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phiếu Chuẩn Bị Bài - Bài 5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f3f4f6;
+            font-family: 'Times New Roman', Times, serif;
+            color: #1f2937;
+        }
+        .worksheet-container {
+            background-color: white;
+            max-width: 1000px; /* Mở rộng khung một chút để chứa chữ lớn */
+            margin: 2rem auto;
+            padding: 3rem 4rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            border-radius: 0.5rem;
+        }
+        select {
+            appearance: none;
+            background-color: #f9fafb;
+            border: 0;
+            border-bottom: 2px dashed #3b82f6;
+            padding: 4px 32px 4px 12px; /* Tăng padding */
+            font-family: inherit;
+            font-size: inherit;
+            color: #2563eb;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.2s ease;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%233b82f6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 8px center;
+            background-size: 18px; /* Icon mũi tên to hơn */
+        }
+        select:hover {
+            background-color: #eff6ff;
+            border-bottom-color: #1d4ed8;
+        }
+        select.correct {
+            border-bottom: 2px solid #10b981;
+            color: #047857;
+            background-color: #d1fae5;
+            background-image: none;
+        }
+        select.incorrect {
+            border-bottom: 2px solid #ef4444;
+            color: #b91c1c;
+            background-color: #fee2e2;
+            background-image: none;
+        }
+        input[type="text"] {
+            border: 0;
+            border-bottom: 1px dotted #000;
+            outline: none;
+            padding: 4px 8px; /* Tăng khoảng trống trong ô điền */
+            font-family: inherit;
+            font-size: inherit;
+            width: auto;
+        }
+        .header-title {
+            text-align: center;
+            margin-bottom: 2.5rem; /* Tăng margin */
+        }
+        .section-title {
+            font-weight: bold;
+            font-size: 1.5rem; /* Tăng font tiêu đề phần */
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            color: #1e3a8a;
+        }
+        .subsection-title {
+            font-weight: bold;
+            font-size: 1.25rem; /* Tăng font tiêu đề mục */
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.75rem;
+            line-height: 1.8; /* Giãn dòng lớn hơn để dễ đọc */
+        }
+        .eq-select {
+            width: 70px; /* Tăng độ rộng cho ô điền hệ số */
+            text-align: center;
+            padding-right: 20px;
+        }
+    </style>
+</head>
+<body class="text-lg md:text-xl leading-relaxed"> <!-- Tăng cỡ chữ tổng thể -->
+
+    <div class="worksheet-container">
+        <div class="header-title">
+            <h2 class="text-2xl md:text-3xl font-bold uppercase">PHIẾU CHUẨN BỊ BÀI</h2>
+            <h1 class="text-3xl md:text-4xl font-bold uppercase mt-4 text-blue-800 leading-snug">BÀI 5: ĐỊNH LUẬT BẢO TOÀN KHỐI LƯỢNG<br>VÀ PHƯƠNG TRÌNH HOÁ HỌC</h1>
+        </div>
+
+        <div class="mb-8 font-semibold">
+            • Họ và tên học sinh: <input type="text" class="w-72 md:w-96"> 
+            &nbsp;&nbsp;&nbsp;Lớp: 8/ <input type="text" class="w-20 md:w-28">
+        </div>
+
+        <!-- PHẦN I -->
+        <div class="section-title">I: TÌM HIỂU ĐỊNH LUẬT BẢO TOÀN KHỐI LƯỢNG</div>
+        
+        <div class="subsection-title">1. Nội dung định luật</div>
+        <ul class="list-disc">
+            <li>Đọc mục 1 và quan sát thí nghiệm giữa dung dịch barium chloride và sodium sulfate:</li>
+            <li>Dấu hiệu cho thấy có phản ứng hoá học xảy ra là: 
+                <select data-answer="1">
+                    <option value="">-- Chọn đáp án --</option>
+                    <option value="1">xuất hiện kết tủa trắng</option>
+                    <option value="2">sủi bọt khí</option>
+                    <option value="3">dung dịch đổi màu</option>
+                    <option value="4">toả nhiệt mạnh</option>
+                </select>
+            </li>
+            <li>So sánh tổng khối lượng của các chất trước phản ứng và sau phản ứng: 
+                <select data-answer="2">
+                    <option value="">-- Chọn đáp án --</option>
+                    <option value="1">lớn hơn</option>
+                    <option value="2">bằng nhau</option>
+                    <option value="3">nhỏ hơn</option>
+                </select>
+            </li>
+            <li>Hoàn thành nội dung định luật do hai nhà khoa học Lomonosov và Lavoisier tìm ra:
+                <div class="mt-2 p-3 bg-gray-50 border border-gray-200 rounded italic">
+                    "Trong một phản ứng hoá học, tổng khối lượng của các chất sản phẩm 
+                    <select data-answer="1">
+                        <option value="">-- Chọn --</option>
+                        <option value="1">bằng</option>
+                        <option value="2">lớn hơn</option>
+                        <option value="3">nhỏ hơn</option>
+                        <option value="4">khác</option>
+                    </select>
+                    tổng khối lượng của các chất tham gia phản ứng."
+                </div>
+            </li>
+        </ul>
+
+        <div class="subsection-title">2. Áp dụng định luật bảo toàn khối lượng</div>
+        <ul class="list-disc">
+            <li>Viết công thức khối lượng cho phản ứng:<br>
+                Barium chloride + Sodium sulfate → Barium sulfate + Sodium chloride<br>
+                → 
+                <select data-answer="3">
+                    <option value="">-- Chọn công thức đúng --</option>
+                    <option value="1">m(Barium chloride) = m(Sodium sulfate) + m(Barium sulfate)</option>
+                    <option value="2">m(Barium chloride) - m(Sodium sulfate) = m(Barium sulfate) - m(Sodium chloride)</option>
+                    <option value="3">m(Barium chloride) + m(Sodium sulfate) = m(Barium sulfate) + m(Sodium chloride)</option>
+                </select>
+            </li>
+            <li class="mt-4">
+                <strong>Thực hành tính:</strong> Đốt cháy hoàn toàn 2,4 g kim loại magnesium trong khí oxygen thu được 4,0 g magnesium oxide. Tính khối lượng oxygen đã tham gia phản ứng:<br>
+                Bài làm: 
+                <select data-answer="2">
+                    <option value="">-- Chọn phép tính đúng --</option>
+                    <option value="1">m(Oxygen) = 4,0 + 2,4 = 6,4 (g)</option>
+                    <option value="2">m(Oxygen) = 4,0 - 2,4 = 1,6 (g)</option>
+                    <option value="3">m(Oxygen) = 4,0 / 2,4 = 1,67 (g)</option>
+                </select>
+            </li>
+        </ul>
+
+        <!-- PHẦN II -->
+        <div class="section-title">II: LẬP PHƯƠNG TRÌNH HOÁ HỌC</div>
+        
+        <div class="subsection-title">1. Lập phương trình hoá học</div>
+        <p class="mb-2 italic">Phương trình hoá học gồm công thức hóa học của các chất trong phản ứng với hệ số thích hợp sao cho số nguyên tử của mỗi nguyên tố ở hai vế đều bằng nhau.</p>
+        
+        <p class="font-semibold mt-4">Ba bước lập phương trình hoá học: Lập phương trình hóa học của phản ứng giữa nhôm (aluminium) và oxygen, tạo thành aluminium oxide.</p>
+        <ol class="list-decimal font-semibold">
+            <li class="font-normal">
+                <strong>Bước 1:</strong> Viết sơ đồ phản ứng 
+                <select data-answer="1">
+                    <option value="">-- Chọn sơ đồ --</option>
+                    <option value="1">Al + O₂ ---> Al₂O₃</option>
+                    <option value="2">Al + O ---> AlO</option>
+                    <option value="3">Al₂ + O₃ ---> Al₂O₃</option>
+                </select>
+            </li>
+            <li class="font-normal">
+                <strong>Bước 2:</strong> Cân bằng số nguyên tử của mỗi nguyên tố ở 2 vế 
+                <select data-answer="3">
+                    <option value="">-- Chọn trạng thái cân bằng --</option>
+                    <option value="1">2Al + 3O₂ ---> 2Al₂O₃</option>
+                    <option value="2">4Al + 2O₂ ---> 2Al₂O₃</option>
+                    <option value="3">4Al + 3O₂ ---> 2Al₂O₃</option>
+                </select>
+            </li>
+            <li class="font-normal">
+                <strong>Bước 3:</strong> Viết phương trình hóa học của phản ứng 
+                <select data-answer="2">
+                    <option value="">-- Chọn phương trình --</option>
+                    <option value="1">4Al + 3O₂ = 2Al₂O₃</option>
+                    <option value="2">4Al + 3O₂ → 2Al₂O₃</option>
+                    <option value="3">Al + O₂ → Al₂O₃</option>
+                </select>
+            </li>
+        </ol>
+
+        <div class="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded">
+            <strong>Lưu ý quan trọng khi cân bằng:</strong><br>
+            Chỉ được thêm các 
+            <select data-answer="1">
+                <option value="">-- Chọn --</option>
+                <option value="1">hệ số</option>
+                <option value="2">chỉ số</option>
+                <option value="3">nguyên tử</option>
+            </select>
+            đặt trước công thức hoá học, tuyệt đối không thay đổi các 
+            <select data-answer="2">
+                <option value="">-- Chọn --</option>
+                <option value="1">hệ số</option>
+                <option value="2">chỉ số</option>
+                <option value="3">nguyên tố</option>
+            </select>
+            ở chân kí hiệu nguyên tố.
+        </div>
+
+        <div class="mt-6">
+            <strong>Bài tập (Điền hệ số cân bằng):</strong> <em>(Chọn "1" nếu không cần điền hệ số)</em>
+            <div class="mt-3 ml-4 space-y-3">
+                <!-- PT 1 -->
+                <div>
+                    <select class="eq-select" data-answer="3"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select> Fe 
+                    + 
+                    <select class="eq-select" data-answer="2"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select> O₂ 
+                    → 
+                    <select class="eq-select" data-answer="1"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select> Fe₃O₄
+                </div>
+                <!-- PT 2 -->
+                <div>
+                    <select class="eq-select" data-answer="2"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="6">6</option></select> Al 
+                    + 
+                    <select class="eq-select" data-answer="6"><option value=""></option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="6">6</option></select> HCl 
+                    → 
+                    <select class="eq-select" data-answer="2"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select> AlCl₃ 
+                    + 
+                    <select class="eq-select" data-answer="3"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="6">6</option></select> H₂
+                </div>
+                <!-- PT 3 -->
+                <div>
+                    <select class="eq-select" data-answer="1"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select> CaCO₃ 
+                    + 
+                    <select class="eq-select" data-answer="2"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select> HCl 
+                    → 
+                    <select class="eq-select" data-answer="1"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select> CaCl₂ 
+                    + 
+                    <select class="eq-select" data-answer="1"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select> CO₂ 
+                    + 
+                    <select class="eq-select" data-answer="1"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select> H₂O
+                </div>
+            </div>
+        </div>
+
+        <div class="subsection-title mt-8">2. Ý NGHĨA CỦA PHƯƠNG TRÌNH HOÁ HỌC</div>
+        <ul class="list-none">
+            <li class="mb-3">
+                Phương trình hoá học cho biết lượng các chất tham gia và sản phẩm tuân theo một 
+                <select data-answer="3">
+                    <option value="">-- Chọn --</option>
+                    <option value="1">quy luật bất kì</option>
+                    <option value="2">tỉ lệ ngẫu nhiên</option>
+                    <option value="3">tỉ lệ xác định</option>
+                </select>
+            </li>
+            <li class="mb-3 p-4 bg-gray-50 border rounded-lg">
+                <p>Cho phương trình hoá học: <strong>4Al + 3O₂ → 2Al₂O₃</strong></p>
+                <div class="mt-2">
+                    Tỉ lệ số nguyên tử Al : số phân tử O₂ : số phân tử Al₂O₃ là: 
+                    <select data-answer="2">
+                        <option value="">-- Chọn tỉ lệ --</option>
+                        <option value="1">2 : 3 : 4</option>
+                        <option value="2">4 : 3 : 2</option>
+                        <option value="3">1 : 1 : 1</option>
+                    </select>
+                </div>
+                <div class="mt-2">
+                    Cứ 4 mol Al tác dụng hết với 
+                    <select data-answer="3" class="eq-select"><option value=""></option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select> mol O₂ 
+                    tạo thành 
+                    <select data-answer="2" class="eq-select"><option value=""></option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select> mol Al₂O₃.
+                </div>
+            </li>
+        </ul>
+
+        <!-- Action Buttons & Score -->
+        <div class="mt-12 pt-8 border-t-2 border-gray-200 text-center">
+            <button onclick="checkAnswers()" class="text-xl bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded shadow-lg transition-colors">
+                Kiểm tra đáp án
+            </button>
+            <button onclick="resetAnswers()" class="text-xl ml-4 bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-8 rounded shadow transition-colors">
+                Làm lại
+            </button>
+            <div id="result-message" class="mt-6 text-2xl font-bold hidden"></div>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            const selects = document.querySelectorAll('select');
+            let correctCount = 0;
+            let totalCount = selects.length;
+
+            selects.forEach(select => {
+                const correctAnswer = select.getAttribute('data-answer');
+                const studentAnswer = select.value;
+                
+                // Reset classes
+                select.classList.remove('correct', 'incorrect');
+
+                if (studentAnswer === "") {
+                    // Chưa điền
+                    select.classList.add('incorrect');
+                } else if (studentAnswer === correctAnswer) {
+                    // Trả lời đúng
+                    select.classList.add('correct');
+                    correctCount++;
+                } else {
+                    // Trả lời sai
+                    select.classList.add('incorrect');
+                }
+            });
+
+            const resultDiv = document.getElementById('result-message');
+            resultDiv.style.display = 'block';
+            
+            if (correctCount === totalCount) {
+                resultDiv.className = 'mt-6 text-2xl font-bold text-green-600';
+                resultDiv.innerHTML = `🎉 Xuất sắc! Bạn đã làm đúng tất cả ${correctCount}/${totalCount} chỗ trống.`;
+            } else {
+                resultDiv.className = 'mt-6 text-2xl font-bold text-red-600';
+                resultDiv.innerHTML = `Bạn đã làm đúng ${correctCount}/${totalCount} chỗ trống. Hãy kiểm tra lại các ô màu đỏ nhé!`;
+            }
+        }
+
+        function resetAnswers() {
+            const selects = document.querySelectorAll('select');
+            selects.forEach(select => {
+                select.value = "";
+                select.classList.remove('correct', 'incorrect');
+            });
+            const resultDiv = document.getElementById('result-message');
+            resultDiv.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
